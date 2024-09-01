@@ -1,96 +1,71 @@
 import React from 'react'
+import ProfileCard from './ProfileCard';
 
-export default function Profile({ freelancer }) {
+const freelancerRandom = {
+    profilePicture: "https://via.placeholder.com/150",
+    name: "Alex Johnson",
+    title: "Full Stack Developer",
+    email: "alex.johnson@example.com",
+    phone: "+1 (555) 123-4567",
+    socialMedia: [
+        { platform: "LinkedIn", url: "https://www.linkedin.com/in/alexjohnson" },
+        { platform: "GitHub", url: "https://github.com/alexjohnson" },
+        { platform: "Twitter", url: "https://twitter.com/alexjohnson" }
+    ],
+    bio: "I am a dedicated and efficient full stack developer with over 5 years of experience in building web applications. Skilled in JavaScript, React, Node.js, and databases.",
+    skills: ["JavaScript", "React", "Node.js", "MongoDB", "CSS", "HTML"],
+    experience: [
+        {
+            role: "Senior Developer",
+            company: "Tech Innovators Inc.",
+            description: "Led a team of developers to build scalable web applications for various clients, using the latest web technologies."
+        },
+        {
+            role: "Frontend Developer",
+            company: "Creative Solutions",
+            description: "Worked on creating responsive and interactive user interfaces using React.js and CSS frameworks."
+        }
+    ],
+    education: [
+        {
+            degree: "B.Sc. in Computer Science",
+            institution: "University of California, Berkeley"
+        },
+        {
+            degree: "M.Sc. in Software Engineering",
+            institution: "Stanford University"
+        }
+    ],
+    portfolio: [
+        {
+            title: "E-commerce Website",
+            description: "Developed a full-fledged e-commerce platform with a custom shopping cart, user authentication, and payment gateway integration.",
+            link: "https://www.example.com/ecommerce"
+        },
+        {
+            title: "Portfolio Website",
+            description: "A personal portfolio website to showcase my skills, projects, and experience.",
+            link: "https://www.example.com/portfolio"
+        }
+    ],
+    reviews: [
+        {
+            comment: "Alex is a fantastic developer! Delivered the project on time and exceeded expectations.",
+            rating: 5
+        },
+        {
+            comment: "Great communication and excellent coding skills. Would definitely hire again.",
+            rating: 4.5
+        }
+    ],
+    isAvailable: true,
+    hourlyRate: "$50/hour",
+    certifications: ["Certified JavaScript Developer", "React Professional Certification"],
+    awards: ["Employee of the Year 2023", "Best Project Award 2022"]
+};
+
+export default function Profile() {
     return(
-        <div className="profile-page">
-            <header className="profile-header">
-                <img src={freelancer.profilePicture} alt={`${freelancer.name}'s profile`} className="profile-picture" />
-                <h1>{freelancer.name}</h1>
-                <p className="tagline">{freelancer.title}</p>
-            </header>
-            <section className="contact-info">
-                <h2>Contact Information</h2>
-                <p>Email: {freelancer.email}</p>
-                {freelancer.phone && <p>Phone: {freelancer.phone}</p>}
-                {freelancer.socialMedia && (
-                    <div className="social-media">
-                        {freelancer.socialMedia.map((link, index) => (
-                            <a key={index} href={link.url} target="_blank" rel="noopener noreferrer">
-                                {link.platform}
-                            </a>
-                        ))}
-                    </div>
-                )}
-            </section>
-            <section className="professional-summary">
-                <h2>Professional Summary</h2>
-                <p>{freelancer.bio}</p>
-                <div className="skills">
-                    {freelancer.skills.map((skill, index) => (
-                        <span key={index} className="skill-tag">{skill}</span>
-                    ))}
-                </div>
-            </section>
-            <section className="experience-education">
-                <h2>Experience</h2>
-                <ul>
-                    {freelancer.experience.map((job, index) => (
-                        <li key={index}>
-                            <h3>{job.role} at {job.company}</h3>
-                            <p>{job.description}</p>
-                        </li>
-                    ))}
-                </ul>
-                <h2>Education</h2>
-                <ul>
-                    {freelancer.education.map((edu, index) => (
-                        <li key={index}>
-                            <h3>{edu.degree} from {edu.institution}</h3>
-                        </li>
-                    ))}
-                </ul>
-            </section>
-            <section className="portfolio">
-                <h2>Portfolio</h2>
-                {freelancer.portfolio.map((project, index) => (
-                    <div key={index} className="portfolio-item">
-                        <h3>{project.title}</h3>
-                        <p>{project.description}</p>
-                        {project.link && <a href={project.link} target="_blank" rel="noopener noreferrer">View Project</a>}
-                    </div>
-                ))}
-            </section>
-            <section className="reviews">
-                <h2>Reviews</h2>
-                {freelancer.reviews.map((review, index) => (
-                    <div key={index} className="review">
-                        <p>{review.comment}</p>
-                        <p><strong>Rating:</strong> {review.rating}</p>
-                    </div>
-                ))}
-            </section>
-            <section className="availability-rates">
-                <h2>Availability & Rates</h2>
-                <p>Currently {freelancer.isAvailable ? 'Available' : 'Not Available'}</p>
-                <p>Hourly Rate: {freelancer.hourlyRate}</p>
-            </section>
-            <section className="certifications-awards">
-                <h2>Certifications & Awards</h2>
-                <ul>
-                    {freelancer.certifications.map((cert, index) => (
-                        <li key={index}>{cert}</li>
-                    ))}
-                </ul>
-                <ul>
-                    {freelancer.awards.map((award, index) => (
-                        <li key={index}>{award}</li>
-                    ))}
-                </ul>
-            </section>
-            <footer className="contact-cta">
-                <button>Hire</button>
-                <button>Message</button>
-            </footer>
-        </div>
+        <ProfileCard freelancer={freelancerRandom} />
     );
 }

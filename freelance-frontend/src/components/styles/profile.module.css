@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+
+
+.profile_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 20px solid black;
+}
+
+.profile_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'merriweather-bold', sans-serif;
+    font-size: 1.5rem;
+    border: 0px;
+    box-shadow: 0;
+    transition: border 0.1s ease box-shadow 0.3s ease;
+    margin: 20px;
+    padding: 10px;
+}
+
+.profile_header:hover {
+    border: 2px solid black;
+    box-shadow: 3.5px 7.0px 7.0px hsl(0deg 0% 0% / 0.39);
+}

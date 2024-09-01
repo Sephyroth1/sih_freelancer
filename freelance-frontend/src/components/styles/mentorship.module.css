@@ -1,0 +1,48 @@
+.container {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 95%;
+    background: #000088;
+}
+
+.profile {
+    max-width: 300px;
+    max-height: 700px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 10px;
+    padding: 15px;
+    width: calc(100% - 40px); /* Adjusting for margin */
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 300px;
+}
+
+.name {
+    font-weight: bold;
+    font-size: 2rem;
+    justify-content: flex-start;
+}
+
+.heading_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.profile:hover {
+    transform: translateY(-10px); /* Lifts the card up */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Intensifies the shadow */
+}
+
+.head {
+    margin: 20px;
+}

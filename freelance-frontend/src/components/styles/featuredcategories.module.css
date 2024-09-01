@@ -1,0 +1,31 @@
+.featured_grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 400px;
+    gap: 12px;
+}
+
+.header_features {
+    font-size: 3rem;
+    justify-self: flex-start;
+}
+
+.feature {
+    font-size: 1.5rem;
+    margin: 10px;
+    background: lavender;
+    padding: 20px;
+    border-radius: 1rem;
+}
+
+.feature:hover {
+    cursor: pointer;
+}
+
+.navlink {
+    text-decoration: none;
+    color: black;
+}

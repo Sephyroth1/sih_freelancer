@@ -1,0 +1,18 @@
+body {
+    height: 100%;
+}
+
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: lavender;
+}
+
+.head {
+    font-size: 2rem;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+}

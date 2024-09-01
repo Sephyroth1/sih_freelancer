@@ -1,14 +1,15 @@
 import React from "react";
-
+import styles from './styles/featuredcategories.module.css';
+import { NavLink } from "react-router-dom";
 
 export default function FeaturedCategories() {
     return(
-        <section className="featured-grid">
-            <h2>Featured Popular Categories</h2>
-            <div className="category-container">
-                <div className="category-grid">Web Development</div>
-                <div className="category-grid">Design</div>
-                <div className="category-grid">Content Writing</div>
+        <section className={styles.featured_grid}>
+            <h2 className={styles.header_features}>Featured Popular Categories</h2>
+            <div className={styles.feature_container}>
+                <div className={styles.feature}><NavLink to="/jobs" className={styles.navlink} >Web Development</NavLink></div>
+                <div className={styles.feature}><NavLink to="/jobs" className={styles.navlink}>Design</NavLink></div>
+                <div className={styles.feature}><NavLink to="/jobs" className={styles.navlink}>Content Writing</NavLink></div>
             </div>
         </section>
     )

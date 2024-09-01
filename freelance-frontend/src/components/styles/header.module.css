@@ -1,0 +1,39 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 7px;
+    margin: 10px;
+    margin-left: 10px;
+    font-size: 1.3rem;
+}
+
+.home,
+.market,
+.login,
+.profile,
+.mentorship,
+.learning {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+
+.home:hover,
+.market:hover,
+.login:hover,
+.profile:hover,
+.mentorship:hover,
+.learning:hover {
+    background: lightgrey;
+}
