@@ -1,4 +1,4 @@
-const { DataTypes, UniqueConstraintError } = require('sequelize');
+const { DataTypes } = require('sequelize');
 const { sequelize } = require('../config/db');
 
 
@@ -7,10 +7,6 @@ const User = sequelize.define('User', {
         type: DataTypes.INTEGER,
         autoIncrement: true,
         primaryKey: true
-    },
-    name: {
-        type: DataTypes.STRING,
-        alloweNull: false
     },
     email: {
         type: DataTypes.STRING,

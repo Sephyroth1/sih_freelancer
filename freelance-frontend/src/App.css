@@ -6,3 +6,8 @@
 html {
     height: 100%;
 }
+
+body {
+    background: #F2FDF5;
+    color: #031C09;
+}

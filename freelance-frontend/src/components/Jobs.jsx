@@ -1,6 +1,9 @@
 import React from 'react';
 import JobCard from './JobCard';
 import styles from './styles/jobs.module.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from 'react-router-dom';
 
 const jobsData = [ 
     {
@@ -41,8 +44,11 @@ const jobsData = [
 ];
 
 export default function Jobs() {
+    const icon =  <FontAwesomeIcon icon={faArrowLeft} size='2x' className={styles.icon} onClick={() => navigate("/")}/>;
+    const navigate = useNavigate();
     return(
         <>
+            {icon}
             <h1 className={styles.head}>Jobs Available</h1>
             <div className={styles.container}>
                 {jobsData.map((job) => (

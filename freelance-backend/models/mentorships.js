@@ -1,41 +1,25 @@
-import { DataTypes } from "sequelize";
-import {sequelize} from '../config/db';
+const { DataTypes } = require("sequelize");
+const { sequelize } = require('../config/db');
 
-
-const FreeLancer = require('./freelancers');
-const Intern = require('./interns');
-
-const Mentorships = await sequelize.define('Mentorship', {
+const Mentorships =  sequelize.define('Mentorship', {
     mentorship_id: {
         type: DataTypes.INTEGER,
         autoIncrment: true,
         primaryKey: true,
     },
-    mentor_id: {
-        type: DataTypes.INTEGER,
-        references: {
-            model: FreeLancer,
-            key: 'freelancer_id',
-        },
-        autoIncrment: true,
-    },
-    intern_id: {
-        type: DataTypes.INTEGER,
-        references: {
-            model: Intern,
-            key: 'intern_id',
-        },
-    },
-    session_date: {
+    start_date: {
         type: DataTypes.DATE,
-        defaultValue: DataTypes.NOW,
+        defaultValue: DataTypes.NOW
     },
-    session_topic: {
-        type: DataTypes.STRING,
+    end_date: {
+        type: DataTypes.DATE
     },
-    notes: {
-        type: DataTypes.STRING,
-    },
+    status: {
+        type: DataTypes.ENUM('active', 'completed', 'cancelled'),
+        defaultValue: 'active'
+    }
 });
 
+Mentorships.belongsTo(User, { as: 'Mentor', foreignKey: 'mentor_id' });
+Mentorships.belongsTo(User, { as: 'Intern', foreignKey: 'intern_id' });
 module.exports = Mentorships;

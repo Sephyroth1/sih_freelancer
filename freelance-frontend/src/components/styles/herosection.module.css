@@ -1,9 +1,9 @@
 @keyframes gradient-change{
     from {
-        background: #096;
+        background-position: 0% 50%;
     }
     to {
-        background: #007acb;
+        background-position: 100% 50%;
     }
     
 }
@@ -17,8 +17,10 @@
     flex-direction: column;
     gap: 10px;
     /* background: linear-gradient(to right, #009966, #007acb ); */
-    background: #096;
-    animation: gradient-change 2s linear 0.5s infinite alternate;
+    background: radial-gradient(circle, rgba(29,231,93,1) 35%, rgba(0,212,255,1) 100%);;
+    background-size: 300% 300%;
+    transition: animation 0.2s ease;
+    animation: gradient-change 5s ease-in-out infinite alternate;
 }
 
 .heading_hero {
@@ -35,7 +37,6 @@
     border-radius: 1rem;
     border: 0;
     background: #00C0FF;
-    color: white;
 }
 
 .action_button:hover {

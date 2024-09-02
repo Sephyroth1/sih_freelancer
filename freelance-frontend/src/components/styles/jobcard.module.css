@@ -1,23 +1,23 @@
 .jobCard {
     max-width: 600px;
+    max-height: 700px;
     padding: 50px;
     font-size: 1.5rem;
     border: 2px solid black;
-    width: 300px;
-    height: 200px;
-    display: flex;
+    height: 300px;
+    display: grid;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    margin: 10px;
+    margin: 5px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    transition: transform 0.2s ease box-shadow 0.5s ease;
-    width: calc(100% - 40px); /* Adjusting for margin */
+    transition: transform 0.2s ease, box-shadow 0.5s ease;
+    width: calc(100% - 40px); 
     background: white;
 }
 
 .title {
     font-size: 1.5rem;
+    justify-content: start;
 }
 
 .applyButton {
@@ -31,4 +31,16 @@
 .jobCard:hover {
     transform: translateY(-10px); /* Lifts the card up */
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Intensifies the shadow */
+}
+
+.description {
+    font-size: 1.2rem;
+}
+
+.employer {
+    font-size: 1.2rem;
+}
+
+.location {
+    font-size: 1.2rem;
 }
