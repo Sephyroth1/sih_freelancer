@@ -17,13 +17,6 @@ const Payments = await sequelize.define('Payment', {
             key: 'project_id',
         },
     },
-    freelancer_id: {
-        type: DataTypes.INTEGER,
-        references: {
-            model: FreeLancer,
-            key: 'freelancer_id',
-        },
-    },
     amount: {
         type: DataTypes.INTEGER(10, 2),
         allowNull: false,
@@ -37,5 +30,7 @@ const Payments = await sequelize.define('Payment', {
         allowNull: false,
     },
 });
+
+Payments.belongsTo(User, { as: 'Freelancer', foreignKey: 'freelancer_id' });
 
 module.exports = Payments;

@@ -1,0 +1,92 @@
+.heading {
+    text-align: center;
+    margin: 30px;
+}
+
+.nav_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+
+.button_details,
+.button_materials,
+.button_mentorDetails {
+    padding: 10px;
+    margin: 5px;
+    border: 0;
+    background: navy;
+    color: white;
+}
+
+.button_details {
+    transition: transform 0.5s ease;
+}
+
+.button_materials{
+    transition: transform 0.5s ease;
+}
+.button_mentorDetails{
+    transition: transform 0.5s ease;
+}
+
+.button_details:hover {
+    transform: scale(1.3);
+}
+
+.button_materials:hover {
+    transform: scale(1.3);
+}
+
+.button_mentorDetails:hover {
+    transform: scale(1.3);
+}
+
+.button_details:hover,
+.button_materials:hover,
+.button_mentorDetails:hover {
+    background: white;
+    color: black;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.course_materials {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: white;
+}
+
+.link_header {
+    font-size: 2rem;
+}
+
+.paragraph_link {
+    font-size: 1.2rem;
+    margin: 10px;
+}
+
+.mentor_details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: white;
+}
+
+.other {
+    font-size: 1.2rem;
+    margin: 10px;
+}
+
+.course_details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: white;
+}

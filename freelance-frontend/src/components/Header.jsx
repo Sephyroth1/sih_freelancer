@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 export default function Header(){
   return (
     <header className={styles.container}>
-        <h1 className={styles.heading}>SkillFolio</h1>
+        <h1 className={styles.heading}>Skill folio</h1>
         <nav className={styles.container}>
           <NavLink to="/" className={styles.home}>Home</NavLink>&nbsp;
           <NavLink to="/jobs" className={styles.market}>marketplace</NavLink>&nbsp;

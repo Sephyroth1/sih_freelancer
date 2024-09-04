@@ -12,6 +12,7 @@ const jobsData = [
         description: "Build a responsive e-commerce website using React and Node.js.",
         employer: "Tech Solutions",
         location: "Remote",
+        amount: "500"
     },
     {
         id: 2,
@@ -19,6 +20,7 @@ const jobsData = [
         description: "Design a logo and brand identity for a new startup.",
         employer: "Creative Minds",
         location: "Remote",
+        amount: "500"
     },
     {
         id: 3,
@@ -26,6 +28,7 @@ const jobsData = [
         description: "Write SEO-optimized articles for a tech blog.",
         employer: "Blog Hub",
         location: "Remote",
+        amount: "500"
     },
     {
         id: 4,
@@ -33,6 +36,7 @@ const jobsData = [
         description: "Run a social media campaign for a new product launch.",
         employer: "Market Pros",
         location: "Remote",
+        amount: "500"
     },
     {
         id: 5,
@@ -41,6 +45,13 @@ const jobsData = [
         employer: "FitTech",
         location: "Remote",
     },
+    {
+        id: 5,
+        title: "Painter",
+        description: "make a painting for an art mueseum",
+        employer: "The Art Musuem",
+        location: "Not Remote",
+    }
 ];
 
 export default function Jobs() {
@@ -52,7 +63,7 @@ export default function Jobs() {
             <h1 className={styles.head}>Jobs Available</h1>
             <div className={styles.container}>
                 {jobsData.map((job) => (
-                    <JobCard key={job.id} job={job}/>
+                    <JobCard key={job.id} job={job} />
                 ))}
             </div>
         </>

@@ -9,11 +9,10 @@ export default function HeroSection() {
     const handleClick = () => {
         navigate('/jobs');
     }
-    console.log(styles);
     return(
         <section className={styles.hero}>
-            <h1 className={styles.heading_hero}>Find you next Freelance Opportunity in India!</h1>
-            <p className={styles.hero_paragraph}>Connecting Freelancer for short-term and project-based work regardless of where you are</p>
+            <h1 className={styles.heading_hero}>Find your next Freelancers Opportunity in India!</h1>
+            <p className={styles.hero_paragraph}>Connecting Freelancers for short-term and project-based work regardless where you are</p>
             <button onClick={handleClick} className={styles.action_button}>Browse Jobs Here</button>
         </section>
     )

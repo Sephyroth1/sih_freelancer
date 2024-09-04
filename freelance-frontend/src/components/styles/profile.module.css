@@ -7,7 +7,6 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border: 20px solid black;
 }
 
 .profile_header {
@@ -24,7 +23,96 @@
     padding: 10px;
 }
 
-.profile_header:hover {
+.header1 {
+    font-size: 3rem;
+}
+
+.header2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.contact_info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.professional_summary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 15px;
+    max-width: 400px;
+}
+
+.experience_education {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 15px;
+    max-width: 500px;
+}
+
+.portfolio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.portfolio_item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.reviews {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.review {
+    text-align: center;
+}
+
+.availability_rates {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.certifications_awards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.but_foot {
+    padding: 10px;
+    margin: 10px;
+    border: 0;
+    background: lightblue;
+}
+
+.but_foot:hover {
+    background: white;
+    color: black;
     border: 2px solid black;
-    box-shadow: 3.5px 7.0px 7.0px hsl(0deg 0% 0% / 0.39);
+    cursor: pointer;
+}
+
+.link {
+    margin: 5px;
+    text-decoration: none;
 }

@@ -16,14 +16,6 @@ const projectAssignment = await sequelize.define('projectAssignment', {
             key: 'project_id'
         }
     },
-    freelancer_id: {
-        type: DataTypes.INTEGER,
-        references: {
-            model: FreeLancer,
-            key: 'freelancer_id'
-        }
-    },
-
     assigned_at: {
         type: DataTypes.DATE,
         defaultValue: DataTypes.NOW,
@@ -34,3 +26,5 @@ const projectAssignment = await sequelize.define('projectAssignment', {
         defaultValue: 'pending',
     },
 });
+
+projectAssignment.belongsTo(User, { as: 'Freelancer', foreignKey: 'freelancer_id' });

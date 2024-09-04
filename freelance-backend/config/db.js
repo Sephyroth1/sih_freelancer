@@ -4,7 +4,7 @@ require('dotenv').config();
 
 const sequelize = new Sequelize(process.env.PG_URL, {
     dialect: 'postgres',
-    logging: false,
+    logging: console.log,
 });
 
 const connectDB = async () => {

@@ -10,23 +10,6 @@ const Projects = await sequelize.define('Project', {
         autoIncrement: true,
         primaryKey: true,
     },
-    client_id: {
-        type: DataTypes.INTEGER,
-        autoIncrement: true,
-        references: {
-            model: Client,
-            key: 'client_id',
-        },
-        allowNull: false,
-    },
-    freelancer_id: {
-        type: DataTypes.INTEGER,
-        autoIncrement: true,
-        references: {
-            model: FreeLancer,
-            key: 'freelancer_id'
-        }
-    },
     title: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -46,3 +29,6 @@ const Projects = await sequelize.define('Project', {
 {
     timestamps: true
 });
+
+Projects.belongsTo(User, { as: 'Client', foreignKey: 'client_id' });
+Projects.belongsTo(User, { as: 'Freelancer', foreignKey: 'freelancer_id' });

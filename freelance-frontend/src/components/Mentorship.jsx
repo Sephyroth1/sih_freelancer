@@ -1,59 +1,89 @@
 import React from 'react'
 import styles from './styles/mentorship.module.css';
+import { useNavigate } from 'react-router-dom';
+import Mentorshipcard from './Mentorshipscard';
 
 export default function Mentorship() {
+    const navigate = useNavigate();
+    const mentor = [
+        {
+            id: 1,
+            name: "Sanju",
+            skill: "Web Developer",
+            yoe: "2 years",
+            location: "Nellore",
+        },
+        {
+            id: 2,
+            name: "Venkatesh",
+            skill: "Python Developer",
+            yoe: "4 years",
+            location: "Hyderabad",
+        },
+        {
+            id: 3,
+            name: "Lalitha",
+            skill: "Front End Developer",
+            yoe: "Freasher",
+            location: "Bangalore",
+        },
+        {
+            id: 4,
+            name: "Bhanu",
+            skill: "Photography",
+            yoe: "6 years",
+            location: "Kerala",
+        },
+        {
+            id: 5,
+            name: "Charan",
+            skill: "Artist",
+            yoe: "6 years",
+            location: "Chennai",
+        },
+        {
+            id: 6,
+            name: "Vaishu",
+            skill: "Video Editor",
+            yoe: "2 years",
+            location: "Karnataka",
+        },
+        {
+            id: 7,
+            name: "Aswini",
+            skill: "Game Editor",
+            yoe: "1 years",
+            location: "Guntur",
+        },
+        {
+            id: 8,
+            name: "Manisha",
+            skill: "Java Developer",
+            yoe: "4 years",
+            location: "Nellore",
+        },
+        {
+            id: 9,
+            name: "Himesh the hero",
+            skill: "Game Designer",
+            yoe: "2 years",
+            location: "USA",
+        },
+        {
+            id: 10,
+            name: "Sudhamshu",
+            skill: "Hacker",
+            yoe: "2 years",
+            location: "Hyderabad",
+        }
+    ]
     return(
     <div className={styles.heading_container}>
     <h1 className={styles.head}>Mentorship</h1>
     <div className={styles.container}>
-        <div className={styles.profile}>
-            <p className={styles.name}>Sanju</p>
-            <p className={styles.other}>Skill: Web Developer</p>
-            <p className={styles.other}>Years of Experience: 2 years</p>
-            <p className={styles.other}>Location: Nellore</p>
-        </div>
-        <div className={styles.profile}>
-            <p className={styles.name}>Venkatesh</p>
-            <p className={styles.other}>Skill: Python Developer</p>
-            <p className={styles.other}>Years of Experience: 4 years</p>
-            <p className={styles.other}>Location: Hyderabad</p>
-        </div>
-        <div className={styles.profile}>
-            <p className={styles.name}>Lalitha</p>
-            <p className={styles.other}>Skill: Front End Developer</p>
-            <p className={styles.other}>Years of Experience: Fresher</p>
-            <p className={styles.other}>Location: Bangalore</p>
-        </div>
-        <div className={styles.profile}>
-            <p className={styles.name}><strong>Bhanu</strong></p>
-            <p className={styles.other}>Skill: Photography</p>
-            <p className={styles.other}>Years of Experience: 6 years</p>
-            <p className={styles.other}>Location: Kerala</p>
-        </div>
-        <div className={styles.profile}>
-            <p className={styles.name}><strong>Charan</strong></p>
-            <p className={styles.other}>Skill: Artist</p>
-            <p className={styles.other}>Years of Experience: 6 years</p>
-            <p className={styles.other}>Location: Chennai</p>
-        </div>
-        <div className={styles.profile}>
-            <p className={styles.name}><strong>Vaishu</strong></p>
-            <p className={styles.other}>Skill: Video Editor</p>
-            <p className={styles.other}>Years of Experience: 2 years</p>
-            <p className={styles.other}>Location: Karnataka</p>
-        </div>
-        <div className={styles.profile}>
-            <p className={styles.name}><strong>Aswini</strong></p>
-            <p className={styles.other}>Skill: Game Editor</p>
-            <p className={styles.other}>Years of Experience: 1 year</p>
-            <p className={styles.other}>Location: Guntur</p>
-        </div>
-        <div className={styles.profile}>
-            <p className={styles.name}><strong>Manisha</strong></p>
-            <p className={styles.other}>Skill: Java Developer</p>
-            <p className={styles.other}>Years of Experience: 4 years</p>
-            <p className={styles.other}>Location: Sulurpet</p>
-        </div>
+                {mentor.map((men) => (
+                    <Mentorshipcard key={men.id} mentor={men} />
+                ))}
     </div>
     </div>
     );

@@ -26,11 +26,17 @@
     border-radius: 0.5rem;
     background: navy;
     color: white;
+    transition: padding 0.3s ease;
+}
+
+.applyButton:hover {
+    cursor: pointer;
+    padding: 15px;
 }
 
 .jobCard:hover {
-    transform: translateY(-10px); /* Lifts the card up */
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Intensifies the shadow */
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); 
 }
 
 .description {

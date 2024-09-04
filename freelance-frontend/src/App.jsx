@@ -7,6 +7,7 @@ import Mentorship from './components/Mentorship';
 import Learning from './components/Learning';
 import Profile from './components/Profile';
 import Signup from './components/Signup';
+import Cart from './components/Cart';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path='/learning' element={<Learning />}></Route>
           <Route path='/profile' element={<Profile />}></Route>
           <Route path='/signup' element={<Signup />}></Route>
+          <Route path='/cart' element={<Cart />}></Route>
       </Routes>
     </Router>
   );
